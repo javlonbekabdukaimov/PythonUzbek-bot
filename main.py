@@ -255,10 +255,12 @@ async def checkinfo(message: types.Message):
             response = f"➡\t'{function.capitalize()}'\tPythonda kalit so'z bo'lib, qiymat mavjud emasligini bildiradi."
 
     else:
-        for text in result['matches']:
+        if text in result['matches']:
             if text in functions:
                 response = f"❌\t'{function.capitalize()}'\t(Bunday ma'lumot topilmadi)\n"
                 response = f"➡\t'Balki\t{text.capitalize()}'ni qidirayotgandirsiz?"
+        else:
+            response = f"❌\t'{function.capitalize()}'\t(Bunday ma'lumot topilmadi)\n"
 
     await message.answer(response)
 
