@@ -14,4 +14,3 @@ def checkInfo(function, functions = functions):
 
 if __name__ == '__main__':
     print(checkInfo('print'))
-    print(checkInfo('intaggdjshgfjgsd'))
