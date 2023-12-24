@@ -1,5 +1,6 @@
 import logging
 
+from functions import functions
 from aiogram import Bot, Dispatcher, executor, types
 from checkfunction import checkInfo
 
@@ -255,9 +256,9 @@ async def checkinfo(message: types.Message):
 
     else:
         for text in result['matches']:
-            if text == 'print':
+            if text in functions:
                 response = f"❌\t'{function.capitalize()}'\t(Bunday ma'lumot topilmadi)\n"
-                response += f"➡\t'{text.capitalize()}()'\tPythondagi maxsus funksiya bo'lib, qavslar ichida berilgan matn yoki ifodalarni konsolga chiqarish vazifasini bajaradi."
+                response = f"➡\t'Balki\t{text.capitalize()}'ni qidirayotgandirsiz?"
 
     await message.answer(response)
 
