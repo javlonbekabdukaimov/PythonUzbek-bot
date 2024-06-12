@@ -4,7 +4,7 @@ from functions import functions
 from aiogram import Bot, Dispatcher, executor, types
 from checkfunction import checkInfo
 
-API_TOKEN = '6114148881:AAGnSknIeINbdNyqBraw4tJv9mpAbp9-Bxo'
+API_TOKEN = 'API TOKEN'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
